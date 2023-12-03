@@ -9,7 +9,7 @@
     <h1>Find Your Best Career Path</h1>
     <h2>Choose your career</h2>
 
-    <p>Enter your program</p>
+    
 
     <!-- <select class="program">
         <option> General Science</option>
@@ -20,18 +20,44 @@
         
     </select> -->
 
-    <input class="program" type="text" placeholder="program">
-    <input type="text">
+    <input class="program" type="text" placeholder="Enter your program">
+    
 
     <button onclick="
-    let text= document.querySelector('.program').innerText
+    const text= document.querySelector('.program');
+    const program = text.value;
 
     
-    if (text.value === 'General Science') {
-        console.log('Science')
+    if (program === 'General Science') {
+         console.log('Science')
+        document.querySelector('.program-info').innerHTML = '<p>You are offering General Science<p>';
+
+    }else if (program === 'General Arts') {
+         
+         document.querySelector('.program-info').innerHTML = '<p>You are offering General Arts<p>';
     }
-    
+    else if (program === 'Business') {
+         
+         document.querySelector('.program-info').innerHTML = '<p>You are offering Business<p>';
+    }
+    else if (program === 'Home Economics') {
+         
+         document.querySelector('.program-info').innerHTML = '<p>You are offering Home Economics<p>';
+    }
+    else if (program === 'Visual Arts') {
+         
+         document.querySelector('.program-info').innerHTML = '<p>You are offering Visual Arts<p>';
+    } 
+    else {
+        console.log('invalid');
+    }
+
+ 
+   
+    text.value=''
     ">Submit</button>
+
+    <p class="program-info"></p>
 
 
 
