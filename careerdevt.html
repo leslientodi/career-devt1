@@ -24,45 +24,18 @@
     
 
     <button onclick="
-    const text= document.querySelector('.program');
-    const program = text.value;
-
+    selectProgram();
     
-    if (program === 'General Science') {
-         console.log('Science')
-        document.querySelector('.program-info').innerHTML = '<p>You are offering General Science<p>';
-
-    }else if (program === 'General Arts') {
-         
-         document.querySelector('.program-info').innerHTML = '<p>You are offering General Arts<p>';
-    }
-    else if (program === 'Business') {
-         
-         document.querySelector('.program-info').innerHTML = '<p>You are offering Business<p>';
-    }
-    else if (program === 'Home Economics') {
-         
-         document.querySelector('.program-info').innerHTML = '<p>You are offering Home Economics<p>';
-    }
-    else if (program === 'Visual Arts') {
-         
-         document.querySelector('.program-info').innerHTML = '<p>You are offering Visual Arts<p>';
-    } 
-    else {
-        console.log('invalid');
-    }
-
- 
-   
-    text.value=''
     ">Submit</button>
 
     <p class="program-info"></p>
+    <a></a>
 
 
 
-    <script>
+    <script src="careerdevt.js">
 
+        
     </script>
 </body>
 </html>
