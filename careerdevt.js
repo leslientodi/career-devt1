@@ -132,7 +132,48 @@ function careerScience () {
     socialGrade = socialInput.value;
     const geographyInput = document.querySelector('.geography');
     geographyGrade = geographyInput.value;
+    if (chemistryGrade === "1" && biologyGrade === "1" && intScienceGrade < 3 && cmathsGrade === "1" && englishGrade < 3){
+        document.querySelector('.entire').innerHTML = `
+        <h2>Select your field of interest</h2>
+        <select class="fields-HM">
+           
+           <option>Human Anatomy</option>
+           <option>Organic Chemistry</option>
+           <option>Lab Equipments</option>
 
+
+           
+        
+        
+        
+        
+        </select>
+        <button class="submit"
+        
+        >Submit</button>`
+
+        const btn = document.querySelector('.submit');
+        const sb = document.querySelector('.fields-HM');
+
+        btn.onclick = (event) => {
+            if (sb.selectedIndex === 0){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Human Biology(Medicine) </h2>`;
+            }
+            else if (sb.selectedIndex === 1){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Pharmacy</h2>`;
+            }
+            else if (sb.selectedIndex === 2){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Biomedical Engineering</h2>`;
+            }
+        
+            else {
+                console.log('invalid')
+            }
+        }
+    }
     if (physicsGrade === '1' && cmathsGrade === '1') {
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
@@ -211,47 +252,6 @@ function careerScience () {
             }
         }
     }
-    else if (physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4 || ictGrade === '1' && physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4) {
-        document.querySelector('.entire').innerHTML = `
-        <h2>Select your field of interest</h2>
-        <select class="fields-HM">
-           
-           <option>Hacking</option>
-           <option>Computers</option>
-           <option>Data and Statistics</option>
-
-           
-        
-        
-        
-        
-        </select>
-        <button class="submit"
-        
-        >Submit</button>`
-
-        const btn = document.querySelector('.submit');
-        const sb = document.querySelector('.fields-HM');
-
-        btn.onclick = (event) => {
-            if (sb.selectedIndex === 0){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Cybersecurity </h2>`;
-            }
-            else if (sb.selectedIndex === 1){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Computer Science</h2>`;
-            }
-            else if (sb.selectedIndex === 2){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Data Science</h2>`;
-            }
-        
-            else {
-                console.log('invalid')
-            }
-        }
-    }
     else if (chemistryGrade === '1' && cmathsGrade < 3 && intScienceGrade < 3 && physicsGrade < 3){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
@@ -293,15 +293,14 @@ function careerScience () {
             }
         }
     }
-    else if (chemistryGrade === "1" && biologyGrade === "1" && intScienceGrade < 3 && cmathsGrade === "1" && englishGrade < 3){
+    else if (physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4 || ictGrade === '1' && physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4) {
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
            
-           <option>Human Anatomy</option>
-           <option>Organic Chemistry</option>
-           <option>Lab Equipments</option>
-
+           <option>Hacking</option>
+           <option>Computers</option>
+           <option>Data and Statistics</option>
 
            
         
@@ -319,15 +318,15 @@ function careerScience () {
         btn.onclick = (event) => {
             if (sb.selectedIndex === 0){
                 document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Human Biology(Medicine) </h2>`;
+                <h2>Bsc Cybersecurity </h2>`;
             }
             else if (sb.selectedIndex === 1){
                 document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Pharmacy</h2>`;
+                <h2>Bsc Computer Science</h2>`;
             }
             else if (sb.selectedIndex === 2){
                 document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Biomedical Engineering</h2>`;
+                <h2>Bsc Data Science</h2>`;
             }
         
             else {
@@ -335,6 +334,70 @@ function careerScience () {
             }
         }
     }
+    else if (intScienceGrade === '1' && biologyGrade < 3 && chemistryGrade < 3 && cmathsGrade < 3 ){
+        document.querySelector('.entire').innerHTML = `
+        <h2>Select your field of interest</h2>
+        <select class="fields-HM">
+           
+           <option>Human Eye</option>
+           <option>Dentition</option>
+           <option>Animal life</option>
+           <option>Plant Anatomy</option>
+           <option>The skin</option>
+           <option>The brain and cognitive abilities</option>
+           <option>Food and Nutrition</option>
+           
+
+           
+        
+        
+        
+        
+        </select>
+        <button class="submit"
+        
+        >Submit</button>`
+
+        const btn = document.querySelector('.submit');
+        const sb = document.querySelector('.fields-HM');
+
+        btn.onclick = (event) => {
+            if (sb.selectedIndex === 0){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Optometry</h2>
+                `;
+            }
+            else if (sb.selectedIndex === 1){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Dentistry</h2>`;
+            }
+            else if (sb.selectedIndex === 2){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Vertinary</h2>`;
+            }
+            else if (sb.selectedIndex === 3){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Horticulture/h2>`;
+            }
+            else if (sb.selectedIndex === 4){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Dermatology</h2>`;
+            }
+            else if (sb.selectedIndex === 5){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Psychology</h2>`;
+            }
+            else if (sb.selectedIndex === 6){
+                document.querySelector('.entire').innerHTML=`
+                <h2>Bsc Food Science</h2>;
+                <h2>Bsc Dietetics</h2>`;
+            }
+            else {
+                console.log('invalid')
+            }
+        }
+    }
+    
     else if (cmathsGrade === '1' && emathsGrade === '1'){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
@@ -464,69 +527,7 @@ function careerScience () {
             }
         }
     }
-    else if (intScienceGrade === '1' && biologyGrade < 3 && chemistryGrade < 3 && cmathsGrade < 3 ){
-        document.querySelector('.entire').innerHTML = `
-        <h2>Select your field of interest</h2>
-        <select class="fields-HM">
-           
-           <option>Human Eye</option>
-           <option>Dentition</option>
-           <option>Animal life</option>
-           <option>Plant Anatomy</option>
-           <option>The skin</option>
-           <option>The brain and cognitive abilities</option>
-           <option>Food and Nutrition</option>
-           
-
-           
-        
-        
-        
-        
-        </select>
-        <button class="submit"
-        
-        >Submit</button>`
-
-        const btn = document.querySelector('.submit');
-        const sb = document.querySelector('.fields-HM');
-
-        btn.onclick = (event) => {
-            if (sb.selectedIndex === 0){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Optometry</h2>
-                `;
-            }
-            else if (sb.selectedIndex === 1){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Dentistry</h2>`;
-            }
-            else if (sb.selectedIndex === 2){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Vertinary</h2>`;
-            }
-            else if (sb.selectedIndex === 3){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Horticulture/h2>`;
-            }
-            else if (sb.selectedIndex === 4){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Dermatology</h2>`;
-            }
-            else if (sb.selectedIndex === 5){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Psychology</h2>`;
-            }
-            else if (sb.selectedIndex === 6){
-                document.querySelector('.entire').innerHTML=`
-                <h2>Bsc Food Science</h2>;
-                <h2>Bsc Dietetics</h2>`;
-            }
-            else {
-                console.log('invalid')
-            }
-        }
-    }
+    
     else if (agricGrade === "1"){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
