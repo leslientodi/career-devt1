@@ -89,11 +89,11 @@ function selectProgram() {
     <p><label>Graphic Design</label><input class='graphic' type='number' min='1' max='9'></p>
     <p><label>Leather work</label><input class='leather' type='number' min='1' max='9'></p>
     <h3>Core Subjects</h3>
-    <p><label>C-Maths</label><input type='number' min='1' max='9'></p>
-    <p><label>English</label><input type='number' min='1' max='9'></p>
-    <p><label>Int-Science</label><input type='number' min='1' max='9'></p>
-    <p><label>Social Studies</label><input type='number' min='1' max='9'></p>
-    <button>Submit</button>`;
+    <p><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></p>
+    <p><label>English</label><input class='english' type='number' min='1' max='9'></p>
+    <p><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></p>
+    <p><label>Social Studies</label><input class='social' type='number' min='1' max='9'></p>
+    <button onclick="careerVisualArts();">Submit</button>`;
     } 
     else {
     console.log('invalid');
@@ -134,7 +134,7 @@ function careerScience () {
     socialGrade = socialInput.value;
     const geographyInput = document.querySelector('.geography');
     geographyGrade = geographyInput.value;
-    if (chemistryGrade < 3  && intScienceGrade < 3 && cmathsGrade === "1" && englishGrade < 3 && emathsGrade < 3){
+    if (chemistryGrade < 3  && intScienceGrade < 3 && cmathsGrade === "1" && englishGrade < 3 && emathsGrade < 3 && englishGrade > 0 && emathsGrade > 0 && chemistryGrade > 0  && intScienceGrade > 0){
         if (biologyGrade === '1' && physicsGrade > 1){
                 document.querySelector('.entire').innerHTML = `
             <h2>Select your field of interest</h2>
@@ -289,7 +289,7 @@ function careerScience () {
         
     }
     
-    else if (physicsGrade === '1' && emathsGrade === '1' || ictGrade === '1' && physicsGrade < 3 && emathsGrade < 3 ) {
+    else if (physicsGrade === '1' && emathsGrade === '1' || ictGrade === '1' && physicsGrade < 3 && emathsGrade < 3 && physicsGrade > 0 && emathsGrade > 0 ) {
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -323,7 +323,7 @@ function careerScience () {
             }
         }
     }
-    else if (chemistryGrade === '1' && cmathsGrade < 3 && intScienceGrade < 3 && physicsGrade < 3){
+    else if (chemistryGrade === '1' && cmathsGrade < 3 && intScienceGrade < 3 && physicsGrade < 3 && cmathsGrade > 0 && intScienceGrade > 0 && physicsGrade > 0){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -364,7 +364,7 @@ function careerScience () {
             }
         }
     }
-    else if (physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4 || ictGrade === '1' && physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4) {
+    else if (physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4 && emathsGrade > 0 && englishGrade > 0 && physicsGrade > 0|| ictGrade === '1' && physicsGrade < 4 && emathsGrade < 4 && englishGrade < 4 && emathsGrade > 0 && englishGrade > 0 && physicsGrade > 0) {
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -405,7 +405,7 @@ function careerScience () {
             }
         }
     }
-    else if (intScienceGrade === '1' && biologyGrade < 3 && chemistryGrade < 3 && cmathsGrade < 3 ){
+    else if (intScienceGrade === '1' && biologyGrade < 3 && chemistryGrade < 3 && cmathsGrade < 3 && biologyGrade > 0 && chemistryGrade > 0 && cmathsGrade > 0 ){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -507,7 +507,7 @@ function careerScience () {
             }
         }
     }
-    else if (intScienceGrade === '1' && biologyGrade < 3 || geographyGrade === '1') {
+    else if (intScienceGrade === '1' && biologyGrade < 3 && biologyGrade > 0 || geographyGrade === '1') {
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -652,21 +652,16 @@ function careerScience () {
 };
 
 function careerGeneralArts (){
-    const gkaInput = document.querySelector('.gka');
-    gkaGrade = gkaInput.value;
+    const governmentInput = document.querySelector('.government');
+    governmentGrade = governmentInput.value;
     
-    const textilesInput = document.querySelector('.textiles');
-    textilesGrade = textilesInput.value;
-    const pictureInput = document.querySelector('.picture');
-    pictureGrade = pictureInput.value;
-    const ceramicsInput = document.querySelector('.ceramics');
-    ceramicsGrade = ceramicsInput.value;
-    const graphicInput = document.querySelector('.graphic');
-    graphicGrade = graphicInput.value;
-    const basketryInput = document.querySelector('.basketry');
-    basketryGrade = basketryInput.value;
-    const leatherInput = document.querySelector('.leather');
-    leatherGrade = leatherInput.value;
+    const historyInput = document.querySelector('.history');
+    historyGrade = historyInput.value;
+    const emathsInput = document.querySelector('.emaths');
+    emathsGrade = emathsInput.value;
+    const economicsInput = document.querySelector('.economics');
+    economicsGrade = economicsInput.value;
+   
 
    
     const cmathsInput = document.querySelector('.cmaths');
@@ -678,12 +673,12 @@ function careerGeneralArts (){
     const socialInput = document.querySelector('.social');
     socialGrade = socialInput.value;
     
-    if (governmentGrade === '1' && englishGrade=== '1' && socialGrade === '1' && historyGrade < 3 ){
+    if (governmentGrade === '1' && englishGrade=== '1' && socialGrade === '1' && historyGrade < 3 && historyGrade > 0 ){
         document.querySelector('.entire').innerHTML=`
         <h2>LLB LAW</h2>`
     }
 
-    else if (cmathsGrade < 3 && economicsGrade < 3){
+    else if (cmathsGrade < 3 && economicsGrade < 3 && cmathsGrade > 0 && economicsGrade > 0){
         document.querySelector('.entire').innerHTML=`
         <h2>Bsc Economics</h2>`
     }
@@ -717,7 +712,7 @@ function careerBusiness (){
     const socialInput = document.querySelector('.social');
     socialGrade = socialInput.value;
 
-    if (bmGrade === '1' && emathsGrade < 3 && cmathsGrade < 3 && faGrade < 3 && costingGrade < 3){
+    if (bmGrade === '1' && emathsGrade < 3 && cmathsGrade < 3 && faGrade < 3 && costingGrade < 3 && emathsGrade > 0 && cmathsGrade > 0 && faGrade > 0 && costingGrade > 0){
         document.querySelector('.entire').innerHTML=`
         <h2>Business Administration(Banking/Accounting/Finance)</h2>`
 
@@ -804,16 +799,17 @@ function careerHomeEcons(){
     const socialInput = document.querySelector('.social');
     socialGrade = socialInput.value;
 
-    if (casGrade === '1' && milGrade < 3){
+    if (casGrade === '1' && milGrade < 3 && milGrade > 0){
         document.querySelector('.entire').innerHTML=`
-         <h2>Fashion Design</h2>`
+         <h2>Fashion Design</h2>
+         <h2>BA Industrial Arts</h2>`
     }
     else if (fanGrade === '1' && chemistryGrade < 4 && chemistryGrade > 0){
         document.querySelector('.entire').innerHTML=`
          <h2>Bsc Dietetics</h2>
          <h2>Bsc food science</h2>`
     }
-    else if (biologyGrade === '1' && intScienceGrade < 4 && cmathsGrade < 4){
+    else if (biologyGrade === '1' && intScienceGrade < 4 && cmathsGrade < 4 && intScienceGrade > 0 && cmathsGrade > 0){
         document.querySelector('.entire').innerHTML = `
         <h2>Select your field of interest</h2>
         <select class="fields-HM">
@@ -901,6 +897,10 @@ function careerHomeEcons(){
             }
         }
     }
+    else {
+        document.querySelector('.entire').innerHTML=`
+        No Career matches your info`
+    }
 
 }
 
@@ -932,6 +932,25 @@ function careerVisualArts (){
     intScienceGrade = intScienceInput.value;
     const socialInput = document.querySelector('.social');
     socialGrade = socialInput.value;
+
+    if (gkaGrade < 3 && gkaGrade > 0){
+        document.querySelector('.entire').innerHTML=`
+        <h2>BA Fine Arts</h2>`
+    }
+    else if (textilesGrade < 3 && textilesGrade > 0 || pictureGrade < 3 && pictureGrade > 0 || ceramicsGrade < 3 && ceramicsGrade > 0 || leatherGrade < 3 && leatherGrade > 0 || basketryGrade < 3 && basketryGrade > 0){
+        document.querySelector('.entire').innerHTML=`
+        <h2>BA Industrial Arts</h2>`
+
+    }
+    else if (graphicGrade < 3 && graphicGrade > 0){
+        document.querySelector('.entire').innerHTML=`
+        <h2>BA Communication Design</h2>`
+    } 
+    
+    else {
+        document.querySelector('.entire').innerHTML=`
+        No Career matches your info`
+    }
 
 }
 
