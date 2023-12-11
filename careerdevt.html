@@ -18,8 +18,9 @@
                 color:antiquewhite;
                 padding: 5px 10px 5px 10px
             }
-            li {
+            .header {
                 display : inline;
+                margin: 10px;
                 
             }
             
@@ -27,9 +28,34 @@
                 text-decoration: none;
                 color:black;
             }
-            ul {
+            header {
                 text-align: right;
+                
             }
+
+            input[type='text'] {
+                border : none;
+                width: 300px;
+                padding : 10px;
+            }
+
+            button:hover {
+                background-color: azure;
+                color: black;
+            }
+
+            a:hover {
+                color: aquamarine;
+            }
+
+            div {
+                display : flex;
+                padding-left: 350px;
+                line-height: 10px;
+                
+            }
+
+            
                
             
     </style>
@@ -38,10 +64,10 @@
 
     <header>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Help</a></li>
+            <li class="header"><a href="">Home</a></li>
+            <li class="header"><a href="">About</a></li>
+            <li class="header"><a href="">Contact Us</a></li>
+            <li class="header"><a href="">Help</a></li>
         </ul>
 
     </header>
@@ -49,7 +75,7 @@
 
 
     <h1>Find Your Best Career Path</h1>
-    <h2>Choose your career</h2>
+    <h2>Enter your program</h2>
 
     
 
@@ -57,7 +83,7 @@
     
     
 
-    <input class="program" type="text" placeholder="Enter your program">
+    <input class="program" type="text" placeholder="eg. General Science">
     
 
     <button onclick="
@@ -65,7 +91,7 @@
     
     ">Submit</button>
 
-    <p class="program-info"></p>
+    <section class="program-info"></section>
     
     
 
