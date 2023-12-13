@@ -12,14 +12,20 @@ function selectProgram() {
     <div>
         
         <ul>
-            <li><h3>Elective Subjects</h3><li>
-            <li><label>Physics</label><input class='physics' type='number' min='1' max='9'></li>
-            <li><label>Chemistry</label><input class='chemistry' type='number' min='1' max='9'></li>
-            <li><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></li>
-            <li><label>Biology</label><input class='biology' type='number' min='1' max='9'></li>
-            <li><label>ICT</label><input class='ict' type='number' min='1' max='9'></li>
-            <li><label>Agriculture</label><input class='agric' type='number' min='1' max='9'></li>
-            <li><label>Geography</label><input class='geography' type='number' min='1' max='9'></li>
+            <li class="courses"><h3>Elective Subjects</h3></li>
+            <li class="courses"><label>Physics</label><input class='physics' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Chemistry</label><input class='chemistry' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Biology</label><input class='biology' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>ICT</label><input class='ict' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Agriculture</label><input class='agric' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Geography</label><input class='geography' type='number' min='1' max='9'></li>
         </ul>
         
     
@@ -27,11 +33,14 @@ function selectProgram() {
     
        
        <ul>
-            <li><h3>Core Subjects</h3></li>
-            <li><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li>
-            <li><label>English</label><input class='english' type='number' min='1' max='9'></li>
-            <li><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li>
-            <li><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
+            <li class="courses"><h3>Core Subjects</h3></li>
+            <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li>
+            <br>
+            <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
        </ul>
        
     </div>
@@ -42,73 +51,95 @@ function selectProgram() {
     }else if (program === 'GENERAL ARTS') {
 
     document.querySelector('.program-info').innerHTML = 
-    `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
-    <h3>Elective Subjects</h3>
-    <p><label>Government</label><input class='government' type='number' min='1' max='9'></p>
-    <p><label>History</label><input class='history' type='number' min='1' max='9'></p>
-    <p><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></p>
-    <p><label>Economics</label><input class='economics' type='number' min='1' max='9'></p>
+    `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2>
     
-    <h3>Core Subjects</h3>
-    <p><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></p>
-    <p><label>English</label><input class='english' type='number' min='1' max='9'></p>
-    <p><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></p>
-    <p><label>Social Studies</label><input class='social' type='number' min='1' max='9'></p>
+    <div>
+       <ul>
+            <h3>Elective Subjects</h3>
+            <li class="courses"><label>Government</label><input class='government' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>History</label><input class='history' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9'></li>
+        </ul>
+        <ul>    
+            <li class="courses"><h3>Core Subjects</h3>
+            <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
+        </ul>
+    </div>
     <button onclick="careerGeneralArts();">Submit</button>`;
     }
     else if (program === 'BUSINESS') {
 
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
-    <h3>Elective Subjects</h3>
-    <p><label>Financial Accounting</label><input class='fa' type='number' min='1' max='9'></p>
-    <p><label>Business Management</label><input class='bm' type='number' min='1' max='9'></p>
-    <p><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></p>
-    <p><label>Economics</label><input class='economics' type='number' min='1' max='9'></p>
-    <p><label>Cost Accounting</label><input class='costing' type='number' min='1' max='9'></p>
-  
-    <h3>Core Subjects</h3>
-    <p><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></p>
-    <p><label>English</label><input class='english' type='number' min='1' max='9'></p>
-    <p><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></p>
-    <p><label>Social Studies</label><input class='social' type='number' min='1' max='9'></p>
+    <div>
+        <ul>
+            <li class="courses"><h3>Elective Subjects</h3>
+            <li class="courses"> <label>Financial Accounting</label><input class='fa' type='number' min='1' max='9'></li><br>
+            <li class="courses"> <label>Business Management</label><input class='bm' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Cost Accounting</label><input class='costing' type='number' min='1' max='9'></li>
+        </ul>
+        <ul>
+            <li class="courses"><h3>Core Subjects</h3>
+            <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
+        </ul>
+    </div>
     <button onclick="careerBusiness();">Submit</button>`;
     }
     else if (program === 'HOME ECONOMICS') {
 
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
-    <h3>Elective Subjects</h3>
-    <p><label>Catering and Sewing</label><input class='cas' type='number' min='1' max='9'></p>
-    <p><label>Food and Nutrition</label><input class='fan' type='number' min='1' max='9'></p>
-    <p><label>Management in Living</label><input class='mil' type='number' min='1' max='9'></p>
-    <p><label>Biology</label><input class='biology' type='number' min='1' max='9'></p>
-    <p><label>Chemistry</label><input class='chemistry' type='number' min='1' max='9'></p>
-    
-    <h3>Core Subjects</h3>
-    <p><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></p>
-    <p><label>English</label><input class='english' type='number' min='1' max='9'></p>
-    <p><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></p>
-    <p><label>Social Studies</label><input class='social' type='number' min='1' max='9'></p>
+    <div>
+        <ul>
+            <li class="courses"><h3>Elective Subjects</h3></li>
+            <li class="courses"><label>Catering and Sewing</label><input class='cas' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Food and Nutrition</label><input class='fan' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Management in Living</label><input class='mil' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Biology</label><input class='biology' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Chemistry</label><input class='chemistry' type='number' min='1' max='9'></li>
+        </ul>
+        <ul>
+            <li class="courses"><h3>Core Subjects</h3></li>
+            <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
+        </ul>
+    </div>
     <button onclick="careerHomeEcons();">Submit</button>`;
     }
     else if (program === 'VISUAL ARTS') {
 
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
-    <h3>Elective Subjects</h3>
-    <p><label>General knowledge in Art</label><input class='gka' type='number' min='1' max='9'></p>
-    <p><label>Textiles</label><input class='textiles' type='number' min='1' max='9'></p>
-    <p><label>Picture making</label><input class='picture' type='number' min='1' max='9'></p>
-    <p><label>Ceramics & Sculpture</label><input class='ceramics' type='number' min='1' max='9'></p>
-    <p><label>Basketry</label><input class='basketry' type='number' min='1' max='9'></p>
-    <p><label>Graphic Design</label><input class='graphic' type='number' min='1' max='9'></p>
-    <p><label>Leather work</label><input class='leather' type='number' min='1' max='9'></p>
-    <h3>Core Subjects</h3>
-    <p><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></p>
-    <p><label>English</label><input class='english' type='number' min='1' max='9'></p>
-    <p><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></p>
-    <p><label>Social Studies</label><input class='social' type='number' min='1' max='9'></p>
+    <div>
+        <ul>
+            <li class="courses"><h3>Elective Subjects</h3></li>
+            <li class="courses"><label>General knowledge in Art</label><input class='gka' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Textiles</label><input class='textiles' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Picture making</label><input class='picture' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Ceramics & Sculpture</label><input class='ceramics' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Basketry</label><input class='basketry' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Graphic Design</label><input class='graphic' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Leather work</label><input class='leather' type='number' min='1' max='9'></li>
+        </ul>
+        <ul>
+            <li class="courses"><h3>Core Subjects</h3>
+            <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></li><br>
+            <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></li>
+        </ul>
+    </div>
     <button onclick="careerVisualArts();">Submit</button>`;
     } 
     else {
