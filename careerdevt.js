@@ -11,7 +11,7 @@ function selectProgram() {
     
     <div>
         
-        <ul>
+        <ul class="elective">
             <li class="courses"><h3>Elective Subjects</h3></li>
             <li class="courses"><label>Physics</label><input class='physics' type='number' min='1' max='9'></li>
             <br>
@@ -32,7 +32,7 @@ function selectProgram() {
        
     
        
-       <ul>
+       <ul class="core">
             <li class="courses"><h3>Core Subjects</h3></li>
             <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li>
             <br>
@@ -54,14 +54,14 @@ function selectProgram() {
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2>
     
     <div>
-       <ul>
+       <ul class="elective">
             <h3>Elective Subjects</h3>
             <li class="courses"><label>Government</label><input class='government' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>History</label><input class='history' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9'></li>
         </ul>
-        <ul>    
+        <ul class="core">    
             <li class="courses"><h3>Core Subjects</h3>
             <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
@@ -76,7 +76,7 @@ function selectProgram() {
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
     <div>
-        <ul>
+        <ul class="elective">
             <li class="courses"><h3>Elective Subjects</h3>
             <li class="courses"> <label>Financial Accounting</label><input class='fa' type='number' min='1' max='9'></li><br>
             <li class="courses"> <label>Business Management</label><input class='bm' type='number' min='1' max='9'></li><br>
@@ -84,7 +84,7 @@ function selectProgram() {
             <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Cost Accounting</label><input class='costing' type='number' min='1' max='9'></li>
         </ul>
-        <ul>
+        <ul class="core">
             <li class="courses"><h3>Core Subjects</h3>
             <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
@@ -99,7 +99,7 @@ function selectProgram() {
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
     <div>
-        <ul>
+        <ul class="elective">
             <li class="courses"><h3>Elective Subjects</h3></li>
             <li class="courses"><label>Catering and Sewing</label><input class='cas' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Food and Nutrition</label><input class='fan' type='number' min='1' max='9'></li><br>
@@ -107,7 +107,7 @@ function selectProgram() {
             <li class="courses"><label>Biology</label><input class='biology' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Chemistry</label><input class='chemistry' type='number' min='1' max='9'></li>
         </ul>
-        <ul>
+        <ul class="core">
             <li class="courses"><h3>Core Subjects</h3></li>
             <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
@@ -122,7 +122,7 @@ function selectProgram() {
     document.querySelector('.program-info').innerHTML = 
     `<p>You are offering ${program}<p> <h2>Now Enter Your Grades</h2> 
     <div>
-        <ul>
+        <ul class="elective">
             <li class="courses"><h3>Elective Subjects</h3></li>
             <li class="courses"><label>General knowledge in Art</label><input class='gka' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Textiles</label><input class='textiles' type='number' min='1' max='9'></li><br>
@@ -132,7 +132,7 @@ function selectProgram() {
             <li class="courses"><label>Graphic Design</label><input class='graphic' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>Leather work</label><input class='leather' type='number' min='1' max='9'></li>
         </ul>
-        <ul>
+        <ul class="core">
             <li class="courses"><h3>Core Subjects</h3>
             <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></li><br>
             <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></li><br>
